@@ -1,6 +1,24 @@
 .header {
     font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    color: #0018A4;
+    background-color: #0018A4;
+    width: 1440px;
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    opacity: 1;
+  }
+  
+  .header-text h1 {
+    font-size: 40px;
+    color: #FFFFFF;
+    line-height: 60px;
     text-align: center;
+  }
+  
+  .header-text h2 {
+    font-size: 30px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 45px;
   }

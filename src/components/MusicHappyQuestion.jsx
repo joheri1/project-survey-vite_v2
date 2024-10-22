@@ -8,34 +8,37 @@ import { useState } from 'react'
 
 const options = [
     "Yes, absolutely",
-    "No, I like the silence",
-    "Sometimes"
+    "No, I like the silence"
 ]
 
-const MusicHappyQuestion = () => {
-    const [happyMusic, setHappyMusic] = useState("") 
-    /* useState for tracking selected option */
+const MusicHappyQuestion = ({ updateFormData, value }) => {
+  const [happyMusic, setHappyMusic] = useState(value)
 
-    return (
-        <form> 
-            <label>Does music make you happy?</label>
-            {options.map((option) => (
-                <label key={option}>
-                    <input
-                        type="radio"
-                        value={option}
-                        onChange={(event) => setHappyMusic(event.target.value)}
-                        checked={happyMusic === option} 
-                        /*Check if the option is selected*/
-                    />
-                    {option}
-                </label>
-            ))} 
-        </form>
-    )
+  const handleOptionChange = (event) => {
+    setHappyMusic(event.target.value) // Update local state
+    updateFormData("MusicHappyQuestion", event.target.value) // Update form data in parent component
+  }
+
+  return (
+    <form>
+    <h2>Does music make you happy?</h2>
+      {options.map((option) => (
+        <label key={option} className="radio-label">
+          <input
+            type="radio"
+            value={option}
+            onChange={handleOptionChange} // Handle selection
+            checked={happyMusic === option} // Check if selected
+          />
+          {option}
+        </label>
+      ))}
+    </form>
+  )
 }
 
 export default MusicHappyQuestion
+
 
 /**
  * Summary:

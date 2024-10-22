@@ -1,0 +1,178 @@
+/* ========== Global styling ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+ /* ========== Overallt text styling ========== */ 
+ h1, h2, p, button {
+    font-family: 'Poppins', sans-serif;
+  }
+  h1 {
+    color: #0018A4;
+  }
+  h2 {
+    color: #0018A4;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+  
+  .form-container h1 {
+    font-size: 40px;
+    line-height: 60px;
+    height: 60px;
+    font-weight: 500;
+    text-align: center;
+    color: #0018A4;
+
+  }
+  .form-container h2 {
+    font-size: 30px;
+    line-height: 45px;
+    height: 45px;
+    font-weight: 400;
+    text-align: center;
+    color: #0018A4;
+  }
+
+/* ========== Question and Answer container layout ========== */
+
+.question-container {
+    display: flex;
+    align-items: center;
+    width: 500px; 
+    height: auto; 
+    padding: 20px; 
+    position: relative; 
+    margin-top: 100px; 
+    left: 467px; 
+    gap: 100px; 
+    opacity: 1; 
+  }
+
+/* ========== Input text layout ========== */
+
+.form-container input {
+    width: 350px;
+    height: 45px;
+    top: 460px;
+    left: 840px;
+    border-radius: 6px;
+    border: 1px solid #000000;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px;
+    gap: 10px;
+}
+  .form-container input::placeholder {
+    color: #9C9C9C;
+  }
+
+/* ========== Radio buttons layout ========== */
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 300px;
+    height: 60px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 6px;
+    border: 1px solid #9C9C9C;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.1s ease, color 0.1s ease;
+    color: #000000;
+}
+
+.radio-label input[type="radio"] {
+    display: none;
+    /* Hide radio button */
+}
+
+/* Styling for radiobutton when selected */
+.radio-label input[type="radio"]:checked+span {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0018A4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Dropdown select layout ========== */
+
+.answer-container-dropdown select {
+    width: 350px;
+    padding: 11px;
+    font-size: 16px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.answer-container-dropdown {
+    position: relative;
+}
+
+.answer-container-dropdown::after {
+    width: 300px;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-100px);
+    font-size: 16px;
+}
+
+.answer-container-dropdown option {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+
+}
+
+/* ========== Submit button styling ========== */ 
+
+.button {
+    width: auto; 
+    min-width: 233px; 
+    height: 60px; 
+    padding: 10px 20px; 
+    gap: 10px; 
+    border-radius: 6px; 
+    border: 1px solid; 
+    border-color: #000000;
+    opacity: 1;
+    background-color: #C2C2C2;
+  }
+  
+  .summary-container {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .summary-container p {
+    margin: 10px 0;
+  }
+
+
+
+

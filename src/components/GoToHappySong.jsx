@@ -6,13 +6,13 @@
 
 export const GoToHappySong = ({ updateFormData, value }) => {
   const handleGoToHappySong = (event) => {
-    updateFormData("goToHappySong", event.target.value);
+    updateFormData("GoToHappySong", event.target.value);
   }
 
   return (
     <div className="border-box">
-      <label>What is your go-to happy song?</label>
-      <select value={value} onChange={handleGoToHappySong}>
+      <h2>What is your go-to happy song?</h2>
+      <select className="answer-container" value={value} onChange={handleGoToHappySong}>
         <option>Select a happy song </option>
         <option value="happy-pharrell">Happy - Pharrell Williams</option>
         <option value="happy-rem">Shiny Happy People - R.E.M.</option>

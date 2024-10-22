@@ -4,22 +4,20 @@
  * This component is used to collect and update the user's Mood Boosting activity in a form.
  */
 
-import { useState } from 'react';
-
-function MoodBoost() {
-  const [moodBoost, setMoodBoost] = useState('')
-  // Start with an empty string
-
+const MoodBoost = ({ updateFormData, value }) => {
   const handleInputChange = (event) => {
-    setMoodBoost(event.target.value)
-    // Update the empty string with user input
-  };
+    updateFormData("MoodBoost", event.target.value); // Update form data in App component
+  }
 
   return (
     <div>
-      <label>What is your favorite mood-boosting activity?</label>
-      <input type="text" value={moodBoost} onChange={handleInputChange} />
-      <p>You typed: {moodBoost}</p>
+      <h2>What is your favorite mood-boosting activity?</h2>
+      <input
+        type="text"
+        value={value}
+        className="answer-container"
+        placeholder="Write your answer here..."
+        onChange={handleInputChange} />
     </div>
   )
 }
